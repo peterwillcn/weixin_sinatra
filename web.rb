@@ -1,5 +1,6 @@
 require 'sinatra'
 
 get '/' do
-  "Hello, world"
+  content_type :json
+  {"params" => params}.to_json
 end
