@@ -1,7 +1,7 @@
 require 'sinatra'
+require "sinatra/json"
 
 get '/' do
   puts params
-  content_type :json
-  {"params" => params}.to_json
+  json :params => params
 end
